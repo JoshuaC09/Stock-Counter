@@ -1,0 +1,16 @@
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\WebApplication2.exe
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\WebApplication2.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\WebApplication2.runtimeconfig.json
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\WebApplication2.pdb
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\MySqlConnector.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Canapi_Joshua_Intern_Projects\Working API BackEnd\MAUI-BACKEND-WORKING-API\WebApplication2\obj\Release\net8.0\PubTmp\Out\WebApplication2.deps.json
