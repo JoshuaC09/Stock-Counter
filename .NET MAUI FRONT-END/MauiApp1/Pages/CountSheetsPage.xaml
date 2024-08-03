@@ -1,0 +1,110 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.ApplicationModel;assembly=CommunityToolkit.Maui.Core"
+             x:Class="MauiApp1.Pages.CountSheetsPage"
+             Title="{Binding CountDescription}"
+             Shell.TabBarIsVisible="False">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Filter"
+                     IconImageSource="filter"
+                     Clicked="Filter_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <!-- Main Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0"
+               BackgroundColor="Transparent"
+               BorderColor="LightGray"
+               CornerRadius="0"
+               Padding="10"
+               HasShadow="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Date" VerticalOptions="Center" Padding="0,0,5,3"/>
+                <Label Grid.Row="0" Grid.Column="1" Text=":" VerticalOptions="Center" Padding="4,0,20,3"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding CountDate, StringFormat='{0:MM/dd/yyyy}'}" VerticalOptions="Center" Padding="0,0,0,3"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Employee Name" VerticalOptions="Center" Padding="0,0,5,3"/>
+                <Label Grid.Row="1" Grid.Column="1" Text=":" VerticalOptions="Center" Padding="4,0,20,3"/>
+                <Label x:Name="EmployeeDetailsLabel" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" Padding="0,0,0,3"/>
+            </Grid>
+        </Frame>
+
+        <!-- ScrollView with CollectionView -->
+        <ScrollView x:Name="Zoom"
+                    Grid.Row="1"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Orientation="Both"
+                    HorizontalScrollBarVisibility="Always">
+            <Grid x:Name="zoomableGrid" Scale="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                      x:Name="HeaderGrid"
+                      BackgroundColor="#0066CC"
+                      HeightRequest="30"
+                      Margin="0,0,0,0"
+                      IsClippedToBounds="True">
+                </Grid>
+                <Label x:Name="sortIndicator" Text=" "
+                        TextColor="White"
+                       VerticalOptions="Center"
+                       FontSize="Medium"
+                       Margin="0,0,0,5"/>
+                <CollectionView Grid.Row="1" x:Name="dataGrid" ItemsSource="{Binding ItemCount}" VerticalOptions="FillAndExpand" SelectionMode="Single" EmptyView="No Items to Display">
+                </CollectionView>
+                <AbsoluteLayout Grid.RowSpan="3">
+                    <ActivityIndicator x:Name="LoadingIndicator" 
+                       IsRunning="False" 
+                       IsVisible="False"
+                       Color="#0066CC"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"/>
+                </AbsoluteLayout>
+            </Grid>
+        </ScrollView>
+
+        <Button Grid.Row="2"
+                Text="+"
+                FontSize="30" 
+                CornerRadius="100" 
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                BackgroundColor="#0066CC"
+                TextColor="White"
+                FontAttributes="Bold" 
+                WidthRequest="60" 
+                HeightRequest="60"
+                Margin="10"
+                Clicked="AddItem_Clicked"/>
+        <Label x:Name="LoadedItemCount"
+               Text=" "
+               VerticalOptions="Center"
+               TextColor="Black"
+               Grid.Row="2"
+               FontSize="Subtitle"
+               Margin="10"/>
+    </Grid>
+</ContentPage>

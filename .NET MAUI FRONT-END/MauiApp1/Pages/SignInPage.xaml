@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.SignInPage"
+             Title="Sign In"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    <Grid>
+        <!-- ActivityIndicator for loading transition -->
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           IsVisible="False"
+                           IsRunning="False"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Color="Blue"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           ZIndex="1"/>
+
+        <!-- Carousel View for Instructions -->
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <CarouselView IndicatorView="indicatorView" x:Name="carouselView" Loop="False">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Padding="10" HeightRequest="600" IsClippedToBounds="True" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="{Binding Title}" Margin="0,0,0,10"/>
+                            <Label FontSize="Medium"  HorizontalTextAlignment="Center" Text="{Binding Description}" Margin="0,10,0,50"/>
+                            <Image Source="{Binding Image}" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" Margin="0"  />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView x:Name="indicatorView" Margin="5" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        
+        
+        <Button Grid.Row="2"
+                Text="Get Started"
+                BackgroundColor="#0066CC"
+                TextColor="White"
+                CornerRadius="25"
+                VerticalOptions="End"
+                HorizontalOptions="FillAndExpand"
+                Margin="20"
+                Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>

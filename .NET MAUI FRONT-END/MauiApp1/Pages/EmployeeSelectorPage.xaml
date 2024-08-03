@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.EmployeeSelectorPage"
+             Title="Select Employee"
+             Shell.TabBarIsVisible="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <SearchBar x:Name="searchEmployee" Grid.Row="0" Placeholder="Search employees"
+                   TextChanged="SearchBar_TextChanged" Margin="10"/>
+
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Employees}" 
+                SelectionMode="Single"
+                SelectionChanged="CollectionView_SelectionChanged"
+                SelectedItem="{Binding SelectedEmployee, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding EmployeeId}" FontSize="Medium" VerticalOptions="Center" FontAttributes="Bold" Grid.Column="0"/>
+                        <Label Text="{Binding EmployeeName}" FontSize="Medium" VerticalOptions="Center" Margin="20,0,0,0" Grid.Column="1"/>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="White" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="LightGray" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+        <Button Grid.Row="2"
+                Text="Next"
+                Clicked="NextButton_Clicked"
+                Margin="10,10,10,10"/>
+    </Grid>
+</ContentPage>
